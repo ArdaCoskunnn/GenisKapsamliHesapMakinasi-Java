@@ -17,11 +17,14 @@ public class HesapMakinasi {
 		System.out.println("----------------------------------------------");
 		System.out.println("5-Daire cevre - alan hesaplaplama\n6-Ucgen cevre - alan\n7-Kare cevre - alan hesaplama");
 		System.out.println("----------------------------------------------");
+		System.out.println("8-Faktöriyel");
+		System.out.println("----------------------------------------------");
 		System.out.print("Yapmak istediginiz islemin numarasini giriniz ==>");
 		islem_numarasi = input.nextInt();
 		System.out.println("----------------------------------------------");
 		
 		switch(islem_numarasi) {
+/*----------------------------------------------------------------------------------*/
 		case 1:		
 			System.out.print("Kac sayi toplanacak ==>");
 			kackeretekrar = input.nextInt() + 1;
@@ -35,7 +38,7 @@ public class HesapMakinasi {
 			}
 			System.out.print("Sonuc ==> " + sonuc);
 			break;
-			
+/*----------------------------------------------------------------------------------*/
 		case 2:
 	
 			System.out.println("Hangi sayidan cikarilacak ==>");
@@ -55,7 +58,7 @@ public class HesapMakinasi {
 			}
 			System.out.print("Sonuc ==> " + sonuc);
 			break;
-			
+/*----------------------------------------------------------------------------------*/
 		case 3:
 			double sonuc_c = 1;
 			System.out.print("Kac sayi carpilacak ==>");
@@ -70,7 +73,7 @@ public class HesapMakinasi {
 			}
 			System.out.print("Sonuc = " + sonuc_c);
 			break;
-			
+/*----------------------------------------------------------------------------------*/
 		case 4:
 			System.out.println("Hangi sayi bolunecek ==>");
 			ilksayi = input.nextDouble();
@@ -89,7 +92,7 @@ public class HesapMakinasi {
 			}
 			System.out.print("Sonuc ==> " + sonuc);
 			break;
-			
+/*----------------------------------------------------------------------------------*/
 		case 5:
 			double yaricap = 0, yaklasik_alan, yaklasik_cevre;
 			
@@ -109,7 +112,7 @@ public class HesapMakinasi {
 			System.out.println("Yaklasik alan ==> " + yaklasik_alan);
 			System.out.println("Alan ==> " + alan);	
 			break;
-			
+/*----------------------------------------------------------------------------------*/
 		case 6:
 			double d_uzunluk, y_uzunluk;
 			
@@ -133,10 +136,10 @@ public class HesapMakinasi {
 			System.out.println("\nCevre ==> " + cevre);
 			System.out.println("Alan ==>" + alan);
 			break;
-			
+/*----------------------------------------------------------------------------------*/	
 		case 7:
 			
-			System.out.println("Kenar uzunlugu giriniz ==> ");
+			System.out.print("Kenar uzunlugu giriniz ==> ");
 			sayi = input.nextDouble();
 			
 			cevre = sayi * 4;
@@ -146,8 +149,22 @@ public class HesapMakinasi {
 			System.out.println("Alan ==>" + alan);
 			
 			break;
+/*----------------------------------------------------------------------------------*/
+		case 8:
+			int sayiFaktoriyel = 0, sonucFaktoriyel = 1, i = 1;
+			System.out.print("Faktoriyelini hesaplamak istediginiz sayiyi giriniz ==> ");
+			sayiFaktoriyel = input.nextInt();
+			
+			while(!(i == sayiFaktoriyel + 1)) {
+				
+				sonucFaktoriyel *= i;
+				i++;	
+			}
+			
+			System.out.print(sayiFaktoriyel + "! ==> " + sonucFaktoriyel);
+			
+			break;
 		}
 		input.close();
 	}
-
 }
